@@ -19,12 +19,11 @@ const Popup = ({ onClose }) => {
             width: 100%;
             height: 100%;
             background-color: rgba(178, 190, 195, 0.2);
-
           }
-		  .popup-content {
-			  margin: 24px
-			  background-color: 
-		  }
+          .popup-content {
+            margin: 24px;
+            background-color: white;
+          }
         `}
       </style>
     </div>

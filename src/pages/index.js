@@ -1,25 +1,32 @@
 import React from "react";
 import { useRouter } from "next/dist/client/router";
+import Link from "next/link";
+import Layout from "../layout";
 
 export default () => {
-  const router = useRouter();
   return (
     <div className="page">
-      <header className="page-header">
-        <h1>Next.js beforePopState Ex</h1>
-      </header>
-      <section className="button_section">
-        <button>팝업 예제</button>
-      </section>
+      <Layout>
+        <header className="page-header">
+          <h1>Next.js beforePopState Ex</h1>
+        </header>
+        <section className="button_section">
+          <Link href={"/popupex"}>
+            <a>팝업 예제 페이지로 이동</a>
+          </Link>
+        </section>
+      </Layout>
+
       <style jsx>
         {`
           .page {
-            position: relative;
+            width: 100vw;
+            height: 100vh;
             padding: 24px;
-            width: 100%;
-            height: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
           }
           .page-header {
             width: 100%;
@@ -34,7 +41,7 @@ export default () => {
             justify-content: center;
             align-items: center;
           }
-          .button_section button {
+          .button_section a {
             font-size: 1em;
             border: 1px solid red;
           }
